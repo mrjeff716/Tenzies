@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgba(9, 8, 37, 0.9);
+  height: 100vh;
+  padding: 2rem;
+}
+
+div#root {
+  height: 100%;
+}
+
+main {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+    font-size: 5vw;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.instructions {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 0;
+    text-align: center;
+}
+
+.die-container {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.die-button {
+  border: none;
+  border-radius: 7px;
+  background-color: white;
+  width: 10vw;
+  height: 10vw;
+  font-size: 3vw;
+  box-shadow: 3px 0px 7px rgba(0,0,0,0.9);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.die-button:hover {
+  transform: scale(1.1);
+  transition: all 0.1s ease;
+}
+
+@media(max-width: 650px) {
+  .die-container {
+    grid-template: auto auto / repeat(2, 1fr);
+    height: fit-content;
+  }
+  .die-button {
+  width: 10vw;
+  height: 10vw;
+  font-size: 3vw;
+}
+}
+@media(max-width: 550px) {
+  .die-container {
+    grid-template: auto auto / repeat(2, 1fr);
+    height: fit-content;
+  }
+  .die-button {
+  width: 14vw;
+  height: 14vw;
+  font-size: 7vw;
+}
+}
+
+.new-roll-button {
+  margin-top: 4rem;
+  padding: 1.25rem 6rem;
+  font-size: 2rem;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(92, 20, 237);
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.9);
+  transition: all 0.2s ease;
+}
+.new-roll-button:hover {
+  box-shadow: 0 5px 25px rgba(0,0,0,0.9);
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+}
+.new-roll-button:active {
+  opacity: 0.9;
+  transition: opacity 0.1s ease;
+}
